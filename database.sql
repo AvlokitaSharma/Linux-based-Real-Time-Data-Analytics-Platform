@@ -1,0 +1,14 @@
+CREATE USER myuser WITH ENCRYPTED PASSWORD 'mypassword';
+CREATE DATABASE mydatabase;
+GRANT ALL PRIVILEGES ON DATABASE mydatabase TO myuser;
+
+
+
+CREATE TABLE sensor_data (
+    id SERIAL PRIMARY KEY,
+    timestamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    sensor_value FLOAT
+);
+
+
+
